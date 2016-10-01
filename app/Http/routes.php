@@ -12,7 +12,7 @@
  */
 
 $app->get('/', function () use ($app) {
-    return $app->version();
+    return file_get_contents('./readme.html');
 });
 
 $app->get('/{timestamp}', function ($timestamp = null) use ($app) {
